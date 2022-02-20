@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { convertMinsToHrsMins } from "../../shared/Movie/RunTime";
 
 
-function DetailMovie({ movie, Details, Credits }) {
+function DetailMovie({ movie, Credits }) {
   const { dispatch, Loaded } = useContext(MovieContext);
 
   // handling watch later in local storage
@@ -59,15 +59,6 @@ function DetailMovie({ movie, Details, Credits }) {
                 item={movie.vote_average * 10 + "%"}
               />
               <MovieDetail name="Vote Count" item={movie.vote_count} />
-              {Details.theMovieDb && (
-                <MovieDetail name="IMDB" item={Details.theMovieDb} />
-              )}
-              {Details.rottenTomatoes && (
-                <MovieDetail
-                  name="RottenTomatoes"
-                  item={Details.rottenTomatoes}
-                />
-              )}
             </div>
           </div>
           <div className="sm:w-1/2 ">

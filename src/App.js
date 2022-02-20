@@ -18,7 +18,7 @@ function App() {
       <MainState>
         <Main />
       </MainState>
-    // </Auth0Provider>
+    </Auth0Provider>
   );
 }
 

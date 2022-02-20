@@ -15,12 +15,19 @@ function Footer() {
           <span className="text-glass">React js developer</span>
         </div>
       </div>
-      <a
-        className="relative w-72 sm:w-32 cursor-pointer flex justify-center rounded text-white_ mb-5 bg-chocolate whitespace-nowrap p-2 hover:opacity-100 opacity-90"
-        href="https://www.google.com"
-      >
-        Hire me
-      </a>
+      <div className="flex flex-col flex-col-reverse sm:flex-row justify-center items-center sm:items-start">
+        <a className="text-grey my-2 mx-2 underline hover:text-white_"
+            href="https://github.com/M-hoseinpour/Netfly"  
+        >
+            Source code
+        </a>
+        <a
+          className="relative w-72 sm:w-32 cursor-pointer flex justify-center rounded text-white_ mb-5 bg-chocolate whitespace-nowrap p-2 hover:opacity-100 opacity-90"
+          href="mailto:mostafahoseinpourmhp@gmail.com"
+        >
+          Hire me
+        </a>
+      </div>
     </div>
   );
 }

@@ -15,7 +15,6 @@ import NotFound from "../shared/NotFound/NotFound";
 function Movie() {
   const { id } = useParams();
   const [movie, setMovie] = useState("");
-  const [Details, setDetails] = useState("");
   const [Credits, setCredits] = useState("");
   const [Pictures, setPictures] = useState("");
   const [Videos, setVideos] = useState("");
@@ -27,7 +26,6 @@ function Movie() {
 
   useEffect(() => {
     FetcherMovie(setMovie, setError, `movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
-    FetcherMovie(setDetails, setError, `https://imdb-api.com/en/API/Ratings/${process.env.REACT_APP_IMDB_KEY}/${movie.imdb_id}`)
     Fetcher(setCredits,  `movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
     Fetcher(setVideos, `/movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
     Fetcher(setPictures, `movie/${id}/images?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_image_language=en,null`);
@@ -50,7 +48,7 @@ function Movie() {
       
         <div className="w-full h-full mt-16 sm:-mt-48 md:-mt-32 z-10  mb-10 m-auto">
           <div className="shadow-md shadow-black mx-2 lg:mx-24  bg-black_ rounded-md">
-            <DetailMovie movie={movie} Details={Details} Credits={Credits} />
+            <DetailMovie movie={movie} Credits={Credits} />
 
             {/* OverView */}
             <div className="p-2">

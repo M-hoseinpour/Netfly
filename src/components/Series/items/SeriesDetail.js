@@ -46,15 +46,6 @@ function SeriesDetail({ Series, Details, Credits }) {
                 item={Series.vote_average * 10 + "%"}
               />
               <MovieDetail name="Vote Count" item={Series.vote_count} />
-              {Details.theMovieDb && (
-                <MovieDetail name="IMDB" item={Details.theMovieDb} />
-              )}
-              {Details.rottenTomatoes && (
-                <MovieDetail
-                  name="RottenTomatoes"
-                  item={Details.rottenTomatoes}
-                />
-              )}
             </div>
           </div>
           <div className="sm:w-1/2 ">

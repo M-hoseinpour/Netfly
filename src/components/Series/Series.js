@@ -15,7 +15,6 @@ import NotFound from "../shared/NotFound/NotFound";
 function Series() {
   const { id } = useParams();
   const [Series, setSeries] = useState("");
-  const [Details, setDetails] = useState("");
   const [Credits, setCredits] = useState("");
   const [Pictures, setPictures] = useState("");
   const [Videos, setVideos] = useState("");
@@ -27,7 +26,6 @@ function Series() {
   
   useEffect(() => {
     FetcherSeries(setSeries, setError, `tv/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
-    FetcherSeries(setDetails, setError, `https://imdb-api.com/en/API/Ratings/${process.env.REACT_APP_IMDB_KEY}/${Series.imdb_id}`)
     Fetcher(setCredits,  `tv/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
     Fetcher(setVideos, `/tv/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
     Fetcher(setPictures, `tv/${id}/images?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_image_language=null`);
@@ -55,7 +53,7 @@ function Series() {
       </div>
       <div className="w-full h-full mt-16 sm:-mt-48 md:-mt-32 z-10  mb-10 m-auto">
         <div className="shadow-md shadow-black mx-2 lg:mx-24  bg-black_ rounded-md">
-          <SeriesDetail Series={Series} Details={Details} Credits={Credits} />
+          <SeriesDetail Series={Series} Credits={Credits} />
 
           {/* OverView */}
           {
