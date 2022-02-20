@@ -1,0 +1,451 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(18, 18, 18);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(133, 133, 133);
+}
+
+.gradient_background {
+  background: rgb(18, 18, 18);
+  background: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.3) 20%,
+    rgba(18, 18, 18, 0.7) 60%,
+    rgba(18, 18, 18, 1) 100%
+  );
+}
+
+* {
+  font-family: "Varela Round", sans-serif;
+}
+html {
+  background-color: rgb(18, 18, 18);
+}
+
+input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 3;
+  color: rgba(191, 200, 209);
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.carousel_image {
+  height: 600px;
+  mask-image: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.8) 15%,
+    rgba(18, 18, 18, 0.9) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.8) 15%,
+    rgba(18, 18, 18, 0.9) 100%
+  );
+}
+.carousel_image_ {
+  background: none;
+}
+.slick-prev {
+  left: 11px;
+}
+.slick-next {
+  right: 11px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 9;
+}
+
+.skeleton {
+  opacity: 1;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 37%, 11%);
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.slick-track {
+  background-color: rgb(18, 18, 18);
+}
+
+.custom-header:before {
+  content: ">";
+  color: transparent;
+}
+
+.lazyload-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.backdrop-home {
+  height: 35vw;
+}
+
+.backdrop-home-img {
+  mask-image: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.1) 10%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.1) 10%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.skeleton-wave {
+  background-color: rgb(18, 18, 18);
+  background: linear-gradient(
+      100deg,
+      rgba(55, 55, 55, 0) 48%,
+      rgba(55, 55, 55, 0.5) 50%,
+      rgba(55, 55, 55, 0) 52%
+    )
+    rgb(18, 18, 18);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.5s skeleton-wave-loading ease-in-out infinite;
+}
+
+.backdrop-movie {
+  height: 35rem;
+}
+
+.backdrop-movie img {
+  mask-image: linear-gradient(
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 0),
+    rgba(18, 18, 18, 0.1),
+    rgb(18, 18, 18, 0.1) 66rem
+  );
+  -webkit-mask-image: linear-gradient(
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 0),
+    rgba(18, 18, 18, 0.1),
+    rgb(18, 18, 18, 0.1) 66rem
+  );
+}
+
+.backdrop-episode img {
+  mask-image: linear-gradient(
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 0),
+    rgba(18, 18, 18, 0.1),
+    rgb(18, 18, 18, 0) 42rem
+  );
+  -webkit-mask-image: linear-gradient(
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 0),
+    rgba(18, 18, 18, 0.1),
+    rgb(18, 18, 18, 0) 42rem
+  );
+}
+
+.clip-detail {
+  clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.castBackground {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDciIGhlaWdodD0iMTQ3IiB2aWV3Qm94PSIwIDAgMTQ3IDE0NyI+CiAgICA8ZyBpZD0iR3JvdXBfMTk4MyIgZGF0YS1uYW1lPSJHcm91cCAxOTgzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjc4IC0yMzEzKSI+CiAgICAgIDxwYXRoIGlkPSJTdWJ0cmFjdGlvbl8yIiBkYXRhLW5hbWU9IlN1YnRyYWN0aW9uIDIiIGQ9Ik0xODk5LjUsNjA0NWE3My4xNTQsNzMuMTU0LDAsMCwxLTQxLjA5NS0xMi41NTMsNzMuNzE5LDczLjcxOSwwLDAsMS0yNi42My0zMi4zMzgsNzMuNCw3My40LDAsMCwxLDYuNzc3LTY5LjcsNzMuNzE2LDczLjcxNiwwLDAsMSwzMi4zMzgtMjYuNjMsNzMuNCw3My40LDAsMCwxLDY5LjcsNi43NzcsNzMuNzE4LDczLjcxOCwwLDAsMSwyNi42MywzMi4zMzgsNzMuNCw3My40LDAsMCwxLTYuNzc3LDY5LjcsNzMuNzE3LDczLjcxNywwLDAsMS0zMi4zMzgsMjYuNjNBNzMuMDQzLDczLjA0MywwLDAsMSwxODk5LjUsNjA0NVptLS4yNjEtMzguNTg3YTcuNTUyLDcuNTUyLDAsMCwxLDMuNDc3Ljg1NGwyMi42NTUsMTEuODVhNy41LDcuNSwwLDAsMCwzLjQ4Mi44NjksNy42MjMsNy42MjMsMCwwLDAsNS43NTYtMi43LDcuMjUzLDcuMjUzLDAsMCwwLDEuNi02bC00LjMyNC0yNS4wOTRhNy4zOTQsNy4zOTQsMCwwLDEsMi4xNDUtNi41NzVsMTguMzMxLTE3Ljc3NGE3LjMyMSw3LjMyMSwwLDAsMCwxLjktNy42LDcuMzcyLDcuMzcyLDAsMCwwLTYuMDM2LTUuMDc0bC0yNS4zMzMtMy42NjRhNy40NTQsNy40NTQsMCwwLDEtNS42MjQtNC4wNjNsLTExLjMyNy0yMi44MzFhNy40MjYsNy40MjYsMCwwLDAtMi44NjctMy4xMDcsNy42MTcsNy42MTcsMCwwLDAtNy42NzQsMCw3LjQyOCw3LjQyOCwwLDAsMC0yLjg2NywzLjEwN2wtMTEuMzI4LDIyLjgzMWE3LjQ1Miw3LjQ1MiwwLDAsMS01LjYyMiw0LjA2M2wtMjUuMzM0LDMuNjY0YTcuNCw3LjQsMCwwLDAtNC4xMzksMTIuNjc3bDE4LjMzLDE3Ljc3NGE3LjQsNy40LDAsMCwxLDIuMTQ3LDYuNTc1bC00LjMyNSwyNS4wOTRhNy4yNTIsNy4yNTIsMCwwLDAsMS42MDUsNiw3LjYyNCw3LjYyNCwwLDAsMCw1Ljc1NiwyLjcsNy41MDksNy41MDksMCwwLDAsMy40ODMtLjg2OWwyMi42NTUtMTEuODVBNy41NDMsNy41NDMsMCwwLDEsMTg5OS4yNCw2MDA2LjQxM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNTQ4IC0zNTg1KSIgZmlsbD0iIzM0MzQzNCIvPgogICAgICA8ZyBpZD0iaWNfbWVudV9wcm9maWxlMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzI5Ljg4MSAyMzYzLjg5MikiPgogICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMzY5IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSAzNjkiIHdpZHRoPSIxNC44MDkiIGhlaWdodD0iMTQuODA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMy43NzIgMTUuMjk0KSIgZmlsbD0ibm9uZSIvPgogICAgICAgIDxnIGlkPSJHcm91cF8xMjMzIiBkYXRhLW5hbWU9Ikdyb3VwIDEyMzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPgogICAgICAgICAgPHBhdGggaWQ9IlBhdGhfNDgwMSIgZGF0YS1uYW1lPSJQYXRoIDQ4MDEiIGQ9Ik0yODYuOTgzLDEzOTQuMzQ0YTI0LjY3OSwyNC42NzksMCwwLDAsMTkuODM2LTkuOTksNi40NjksNi40NjksMCwwLDAsMS02LjAyOSwxMy45NTUsMTMuOTU1LDAsMCwwLTguMjgzLTguMTgzLDQsNCwwLDAsMC0zLjY3My4zNjUsMTUuNDA3LDE1LjQwNywwLDAsMS0xNy43NjgsMCwzLjk4NCwzLjk4NCwwLDAsMC0zLjY0NS0uMzczLDEzLjk1LDEzLjk1LDAsMCwwLTguMjgzLDguMTE1LDYuNDY3LDYuNDY3LDAsMCwwLDEuMDg2LDYuMTQ3QTI1LjMsMjUuMywwLDAsMCwyODYuOTgzLDEzOTQuMzQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2NS44MTggLTEzNDguOTQ3KSIgZmlsbD0iIzM0MzQzNCIvPgogICAgICAgICAgPGVsbGlwc2UgaWQ9IkVsbGlwc2VfMTA5IiBkYXRhLW5hbWU9IkVsbGlwc2UgMTA5IiBjeD0iMTAuNTkxIiBjeT0iMTAuNTkxIiByeD0iMTAuNTkxIiByeT0iMTAuNTkxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC41NzUpIiBmaWxsPSIjMzQzNDM0Ii8+CiAgICAgICAgPC9nPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movieBackground {
+  background: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* loading */
+
+.loading {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loadingMore {
+  position: relative;
+  margin-top: 30px;
+}
+
+.lds-ellipsis {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* Loading Spinner */
+
+@keyframes ldio-0x6rslnza9y {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ldio-0x6rslnza9y div {
+  position: absolute;
+  animation: ldio-0x6rslnza9y 0.8s linear infinite;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #e15b64;
+  transform-origin: 40px 41px;
+}
+.loadingio-spinner-eclipse-79zttj4n114 {
+  width: 51px;
+  height: 51px;
+  display: inline-block;
+  overflow: hidden;
+  background: inherit;
+}
+.ldio-0x6rslnza9y {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.51);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.ldio-0x6rslnza9y div {
+  box-sizing: content-box;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 54.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.profile-background {
+  background-image: url("https://scontent.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-5&_nc_sid=7206a8&_nc_ohc=H17oga767iMAX-zJRze&_nc_ht=scontent.xx&oh=00_AT8fQES8vCr_bnybgV-icaQc_9sWh-vQs6UDl4s4Zs5q7w&oe=62284F78");
+}
+
+@keyframes skeleton-wave-loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel_image {
+    height: 600px;
+  }
+}
+
+
+/* 404 page styles */
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
+.error-container {
+  text-align: center;
+  font-size: 106px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  height: 52vh;
+}
+.error-container > span {
+  display: inline-block;
+  position: relative;
+}
+.error-container > span.four {
+  width: 105px;
+  height: 20px;
+  border-radius: 999px;
+  background:
+    linear-gradient(140deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 43%, transparent 44%, transparent 100%),
+    linear-gradient(105deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.06) 41%, rgba(0, 0, 0, 0.07) 76%, transparent 77%, transparent 100%),
+    linear-gradient(to right, #d89ca4, #e27b7e);
+}
+.error-container > span.four:before,
+.error-container > span.four:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 999px;
+}
+.error-container > span.four:before {
+  width: 25px;
+  height: 120px;
+  left: 60px;
+  bottom: -43px;
+  background:
+    linear-gradient(128deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 40%, transparent 41%, transparent 100%),
+    linear-gradient(116deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 50%, transparent 51%, transparent 100%),
+    linear-gradient(to top, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
+}
+.error-container > span.four:after {
+  width: 111px;
+  height: 26px;
+  transform: rotate(315deg);
+  left: -15px;
+  bottom: 32px;
+  background: linear-gradient(to right, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
+}
+
+.error-container > span.zero {
+  vertical-align: text-top;
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.06) 50%,  transparent 51%, transparent 100%),
+    linear-gradient(to top right, #99749D, #99749D, #B895AB, #CC9AA6, #D7969E, #ED8687, #ED8687);
+  overflow: hidden;
+}
+
+.error-container > span.zero:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 999px;
+  width: 70px;
+  height: 70px;
+  left: 25px;
+  bottom: 25px;
+  background: rgb(18, 18, 18);
+  box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+}
+    
+
+
+/* No rearch result */
+
+.typewriter h1 {
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(30, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
