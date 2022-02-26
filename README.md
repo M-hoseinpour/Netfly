@@ -3,7 +3,7 @@
 Live Demo at (http://mhoseinpour.ir/)./
 This project is Developed By Mohammad Hoseinpour with React js.
 
-## Features : Evething a movie website requires
+## Features : Everything a movie website requires
  Categorized Movies and series in genres(Action, Comedy, Science fiction,...) with ability of filtering them by genre type, release date...\
  Sorting movies and series into orders of ascending/descending popularity, vote average,...\
  Authentication with email and password or google's auto gmail login with auth0.\
